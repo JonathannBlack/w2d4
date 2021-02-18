@@ -9,8 +9,16 @@ Examples:
 arrowMirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
 arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 ***********************************************************************/
+const arrowMirrorArray = (array) => {
+  let newArray = [];
+  array.forEach((num) => {
+    newArray.unshift(num);
+  })
+  return array.concat(newArray)
+}
 
-// your code here
+arrowMirrorArray([1,2,3]); // => [ 1, 2, 3, 3, 2, 1 ]
+arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b', 'a' ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
