@@ -22,24 +22,21 @@ const sandwichMaker = () => {
   let ingredients = ['tomato']
   return newIngredient => {
     ingredients.push(newIngredient)
-    let result = "One sandwich with "
+    let result = "One sandwich with"
     ingredients.forEach((ele, i) => {
-      result += ele + " "
+      result += " " + ele
       if (i !== ingredients.length - 1) {
-        result += "and "
+        result += " and"
       }
     })
     return result
   }
-
-
-
 }
 
 let sandwich = sandwichMaker(); // => returns a function
-sandwich("spinach")// => "One sandwich with tomato and spinach"
-sandwich("jelly") // => "One sandwich with tomato and spinach and jelly"
-sandwich("bread") // => "One sandwich with tomato and spinach and jelly and bread"
+console.log(sandwich("spinach"))// => "One sandwich with tomato and spinach"
+console.log(sandwich("jelly"))// => "One sandwich with tomato and spinach and jelly"
+console.log(sandwich("bread"))// => "One sandwich with tomato and spinach and jelly and bread"
 
 
 let sandwich2 = sandwichMaker(); // => returns a function
